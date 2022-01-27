@@ -1,0 +1,61 @@
+{
+  "expo": {
+    "name": "HaloStar Wallet",
+    "slug": "uphone-wallet",
+    "version": "1.0.1",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "cover",
+      "backgroundColor": "#2C2B2A"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 200
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": false,
+      "infoPlist": {
+        "NSPhotoLibraryUsageDescription": "The app accesses your photos to let you change the in app display picture.",
+        "NSCameraUsageDescription": "Allow HaloStar Wallet to access your camera in order to scan QR codes for wallet.",
+        "NSMicrophoneUsageDescription": "Allow HaloStar Wallet to access your microphone",
+        "NSFaceIDUsageDescription": "Allow HaloStar Wallet to use Face ID to securly lets you login into the app."
+      },
+      "bundleIdentifier": "com.logmethod.hsr"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#FFFFFF"
+      },
+      "permissions": [
+        "android.permission.CAMERA",
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.WRITE_EXTERNAL_STORAGE",
+        "android.permission.RECORD_AUDIO"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "description": "",
+    "plugins": [
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "The app accesses your photos to let you share them with your friends."
+        }
+      ],
+      [
+        "@stripe/stripe-react-native",
+        {
+          "merchantIdentifier": [],
+          "enableGooglePay": true
+        }
+      ]
+    ]
+  }
+}
